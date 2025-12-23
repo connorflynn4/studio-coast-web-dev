@@ -23,8 +23,8 @@ const capabilities = [
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+    <section id="capabilities" className="relative z-10 py-12 md:py-16 px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-10 md:mb-12">
         <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-4">What We Build</h2>
         <p className="text-neutral-500 text-sm">Full-stack web applications with intelligent features.</p>
       </div>

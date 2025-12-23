@@ -41,13 +41,13 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+    <section id="services" className="relative z-10 py-12 md:py-16 px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-10 md:mb-12">
         <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-4">Our Services</h2>
         <p className="text-neutral-500 text-sm">Comprehensive web development solutions with AI integration.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => {
           const Icon = service.icon;
           const colorClasses = {
