@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-primary: #000000;
+  --bg-secondary: rgba(23, 23, 23, 0.3);
+  --bg-tertiary: rgba(23, 23, 23, 0.5);
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-tertiary: #737373;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --nav-bg: rgba(0, 0, 0, 0.5);
+  --card-bg: rgba(23, 23, 23, 0.3);
+  --section-bg: rgba(10, 10, 10, 0.5);
+}
+
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: rgba(249, 250, 251, 0.8);
+  --bg-tertiary: rgba(243, 244, 246, 0.9);
+  --text-primary: #000000;
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(249, 250, 251, 0.6);
+  --section-bg: rgba(243, 244, 246, 0.4);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Space Background Animation */
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+  animation: animStar 50s linear infinite;
+}
+
+.stars::after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+}
+
+@keyframes animStar {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-2000px); }
+}
+
+/* Subtle Grid */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+[data-theme="light"] .bg-grid {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+/* Theme transition */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode overrides */
+[data-theme="light"] .bg-neutral-900\/30,
+[data-theme="light"] .bg-neutral-900\/40,
+[data-theme="light"] .bg-neutral-950\/50 {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme="light"] .bg-black\/50 {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="light"] .text-white {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .text-neutral-400 {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .text-neutral-500 {
+  color: var(--text-tertiary) !important;
+}
+
+[data-theme="light"] .text-neutral-300 {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .text-neutral-600 {
+  color: var(--text-tertiary) !important;
+}
+
+[data-theme="light"] .border-white\/10,
+[data-theme="light"] .border-white\/5 {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="light"] .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .bg-white\/20 {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .bg-black {
+  background-color: var(--bg-primary) !important;
+}
+
+[data-theme="light"] .bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--text-primary), var(--text-tertiary)) !important;
+}
+
+[data-theme="light"] .bg-indigo-900\/20 {
+  background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+[data-theme="light"] .bg-purple-900\/10 {
+  background-color: rgba(147, 51, 234, 0.05) !important;
+}
+
+[data-theme="light"] .bg-indigo-500\/20 {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+}
+
+[data-theme="light"] .bg-indigo-500\/10 {
+  background-color: rgba(99, 102, 241, 0.08) !important;
+}
+
+[data-theme="light"] .bg-indigo-500\/40 {
+  background-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+[data-theme="light"] .bg-indigo-500\/50 {
+  background-color: rgba(99, 102, 241, 0.3) !important;
+}
+
+[data-theme="light"] .bg-neutral-900\/80 {
+  background-color: rgba(249, 250, 251, 0.8) !important;
+}
+
+[data-theme="light"] .bg-neutral-900\/50 {
+  background-color: rgba(249, 250, 251, 0.5) !important;
+}
+
+[data-theme="light"] .bg-neutral-200 {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .text-black {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .stars {
+  opacity: 0.2;
+}
+
+/* Code snippet styling for light mode - darker background for better readability */
+[data-theme="light"] .code-snippet {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="light"] .code-snippet .text-neutral-400 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-theme="light"] .code-snippet .text-neutral-600 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Dashboard card backgrounds for light mode */
+[data-theme="light"] .bg-neutral-900 {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+[data-theme="light"] .bg-neutral-900\/50 {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Gradient Text Animation */
+.animate-text-shimmer {
+  background-size: 200% auto;
+  animation: textShimmer 3s linear infinite;
+}
+
+@keyframes textShimmer {
+  to { background-position: 200% center; }
+}
+
+/* Float Animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Glow Keyframes */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.glow-blob {
+  animation: pulse-glow 8s infinite;
+}
+
