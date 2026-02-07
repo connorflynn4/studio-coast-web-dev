@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
   --bg-primary: #000000;
@@ -104,6 +104,16 @@ body {
 
 [data-theme="light"] .text-neutral-300 {
   color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .hero-badge {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  color: #4f46e5 !important;
+}
+
+[data-theme="light"] .footer-logo-dot {
+  background-color: #7c3aed !important;
 }
 
 [data-theme="light"] .text-neutral-600 {
